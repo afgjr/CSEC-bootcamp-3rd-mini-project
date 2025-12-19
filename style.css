@@ -1,0 +1,176 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #2a3c7f);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            transition: all 0.5s ease;
+            min-height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* OFF State */
+        .off-state {
+            color: #e74c3c;
+            text-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        /* ON State */
+        .on-state {
+            color: #2ecc71;
+            text-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .toggle-btn {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+            display: inline-block;
+        }
+        
+        .toggle-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.5);
+        }
+        
+        .toggle-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .state-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+        }
+        
+        .indicator.active {
+            background-color: #2ecc71;
+        }
+        
+        .indicator:first-child.active {
+            background-color: #e74c3c;
+        }
+        
+        .counter {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .counter span {
+            font-weight: 700;
+            color: #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 25px;
+                max-width: 90%;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+                letter-spacing: 3px;
+                min-height: 100px;
+            }
+            
+            .toggle-btn {
+                padding: 16px 35px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8rem;
+                letter-spacing: 2px;
+                min-height: 80px;
+            }
+            
+            .container {
+                padding: 25px 20px;
+            }
+            
+            .toggle-btn {
+                padding: 14px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .instructions {
+                padding: 15px;
+            }
+        }
